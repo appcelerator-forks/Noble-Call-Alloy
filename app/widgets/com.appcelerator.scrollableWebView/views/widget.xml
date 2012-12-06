@@ -1,0 +1,6 @@
+<Alloy>
+    <View id="translucentView"/>
+    <ScrollableView id="scrollableView"/>
+    <Button id="prevButton"/>
+    <Button id="nextButton"/>
+</Alloy>

@@ -1,0 +1,13 @@
+tmp
+build
+Resources
+
+modules/.DS_Store
+
+.DS_Store
+
+.settings/com.appcelerator.titanium.core.prefs
+
+.settings/com.aptana.editor.common.prefs
+
+*.log

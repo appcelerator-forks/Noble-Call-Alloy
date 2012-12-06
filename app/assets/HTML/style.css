@@ -1,0 +1,81 @@
+h1 {
+	background-color:#333333;
+  color: #FFFFFF;
+	font-family: "Futura-CondensedMedium", "Sans", sans-serif;
+	font-size: 140%;
+  padding: 10px;
+}
+
+h2 {
+	background-color:#444444;
+	color: #FFFFFF;
+	font-family: "Futura-CondensedMedium", "Sans", sans-serif;
+	font-size: 120%;
+  padding: 10px;
+}
+
+h3 {
+	background-color:#555555;
+	color: #FFFFFF;
+	font-size: 110%;
+	font-family: "Futura-CondensedMedium", "Sans", sans-serif;
+  padding: 10px;
+}
+
+h4 {
+	background-color:#666666;
+	color: #FFFFFF;
+	font-size: 100%;
+	font-family: "Futura-CondensedMedium", "Sans", sans-serif;
+  padding: 10px;
+}
+
+h5 {
+	background-color:#777777;
+	color: #000000;
+	font-size: 100%;
+	font-family: "Futura-CondensedMedium", "Sans", sans-serif;
+  padding: 10px;
+}
+
+ul {
+  margin-left: 0.5em; padding-left: 0.5em;
+}
+
+ol {
+  margin-left: 0.5em; padding-left: 0.5em;
+}
+
+li {
+	font-family: "Optima-Regular", "Sans", sans-serif;
+  font-size: 90%;  
+}
+body {
+	font-size: 100%;
+	font-family: "Optima-Regular", "Sans", sans-serif;
+	margin: 1em;
+}
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+}
+.bibleref {
+	color: #C0C0C0;
+	background-color: #222222
+}
+.align-right {
+	float: right;
+	margin: 0 0 15px 15px;
+	padding: 10px
+}
+.align-left {
+	float: left;
+	margin: 0 15px 15px 0;
+	padding: 10px
+}
+.frame {
+	padding: 5px;
+	border: 1px solid #aaa;
+}

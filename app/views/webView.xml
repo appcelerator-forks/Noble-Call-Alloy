@@ -1,0 +1,7 @@
+<Alloy>
+    <Window id="webView">
+        <View id="fill">
+            <Widget src="com.appcelerator.scrollableWebView" id="scrollableWebView" />               
+        </View>
+    </Window>
+</Alloy>

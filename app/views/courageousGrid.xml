@@ -1,0 +1,7 @@
+<Alloy>
+    <Window id="main">
+        <View id="fill">
+            <Widget src="com.appcelerator.buttongrid" id="buttongrid" />               
+        </View>
+    </Window>
+</Alloy>

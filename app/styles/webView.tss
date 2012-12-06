@@ -1,0 +1,12 @@
+"#main": {
+    height: Ti.UI.FILL,
+    top: "0dp",
+    fullscreen: false,
+},  
+
+"#fill": {
+    backgroundImage: "/images/BackgroundTile.png",
+    backgroundRepeat: true,
+    height: Ti.UI.FILL,
+    top: "0dp"
+}
