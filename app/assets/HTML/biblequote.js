@@ -5,3 +5,8 @@ window.onload = function() {
 		buttons[i].setAttribute('onClick', "Ti.App.fireEvent('requestBibleQuote', { verse: '" + buttons[i].innerHTML.replace(/^\s+|\s+$/g, '') + "'});");
 	}
 };
+
+Ti.App.addEventListener('changeFontSize', function (e) {
+    Ti.API.info('Changing font size to ' + e.fontSize);
+    document.body.style.fontSize = e.fontSize; 
+});

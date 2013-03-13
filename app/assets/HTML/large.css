@@ -1,0 +1,146 @@
+.purple {
+	background-color: #2f2874	
+}
+
+.blue {
+	background-color: #5869b6
+}
+
+.red {
+	background-color: #9e0000
+}
+
+.green {
+	background-color: #558227
+}
+
+.tan {
+	background-color: #b1814b
+}
+
+.teal {
+	background-color: #26688b
+}
+
+h1 {  
+  background-color: #333333;  
+  color: white;  
+  font-family: "Futura-CondensedMedium", "Sans", sans-serif;  
+  font-size: 1.75em;  
+  padding: 0.5em;  
+}
+
+h2 {  
+  background-color: #444444;  
+  color: white;  
+  font-family: "Futura-CondensedMedium", "Sans", sans-serif;  
+  font-size: 1.5em;  
+  padding: 0.5em;  
+}
+
+h3 {  
+  background-color: #555555;  
+  color: white;  
+  font-size: 1.25em;  
+  font-family: "Futura-CondensedMedium", "Sans", sans-serif;  
+  padding: 0.5em;  
+}
+
+h4 {  
+  background-color: #666666;  
+  color: white;  
+  font-size: 1.1em;  
+  font-family: "Futura-CondensedMedium", "Sans", sans-serif;  
+  padding: 0.5em;  
+}
+
+h5 {  
+  background-color: #777777;  
+  color: black;  
+  font-size: 1em;  
+  font-family: "Futura-CondensedMedium", "Sans", sans-serif;  
+  padding: 0.5em;  
+}
+
+ul {  
+  margin-left: 0.5em;  
+  padding-left: 0.5em;
+  font-size: 1em;  
+}
+
+ol {  
+  margin-left: 0.5em;  
+  padding-left: 0.5em;
+  font-size: 1em;  
+}
+
+li {  
+  font-family: "Optima-Regular", "Sans", sans-serif;  
+}
+
+body {  
+  font-size: 100%;  
+  font-family: "Optima-Regular", "Sans", sans-serif;  
+  margin: 0.5em;  
+}
+
+em {  
+  font-style: italic;
+}
+
+strong {  
+  font-weight: bold;
+}
+
+.bibleref {  
+  color: silver;  
+  background-color: #222222;
+  font-size: 100%;  
+  font-family: "Optima-Regular", "Sans", sans-serif;  
+}
+
+.align-right {  
+  float: right;  
+  margin-top: 0px;  
+  margin-right: 0px;  
+  margin-bottom: 15px;  
+  margin-left: 15px;  
+  padding-top: 10px;  
+  padding-right: 10px;  
+  padding-bottom: 10px;  
+  padding-left: 10px;  
+  width: 110.354px;  
+  height: 135px;
+}
+
+.align-left {  
+  float: left;  
+  margin-top: 0px;  
+  margin-right: 15px;  
+  margin-bottom: 15px;  
+  margin-left: 0px;  
+  padding-top: 10px;  
+  padding-right: 10px;  
+  padding-bottom: 10px;  
+  padding-left: 10px;
+}
+
+.frame {  
+  padding-top: 5px;  
+  padding-right: 5px;  
+  padding-bottom: 5px;  
+  padding-left: 5px;  
+  border-top-width: 1px;  
+  border-top-style: solid;  
+  border-top-color: #aaaaaa;  
+  border-right-width: 1px;  
+  border-right-style: solid;  
+  border-right-color: #aaaaaa;  
+  border-bottom-width: 1px;  
+  border-bottom-style: solid;  
+  border-bottom-color: #aaaaaa;  
+  border-left-width: 1px;  
+  border-left-style: solid;  
+  border-left-color: #aaaaaa;
+}
+

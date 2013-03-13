@@ -7,6 +7,10 @@
     "os:android": {},
     "dependencies": {
         "com.appcelerator.buttongrid": "1.0",
-        "com.appcelerator.scrollableWebView": "1.0"
+        "com.orthlieb.scrollablewebview": "1.0",
+        "com.orthlieb.navigationgroup": "1.0",
+        "com.orthlieb.combobox": "1.0",
+        "com.appcelerator.loading": "1.0",
+        "com.orthlieb.info": "1.0"
     }
 }
