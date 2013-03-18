@@ -5,8 +5,7 @@
 },  
 
 "#fill": {
-    backgroundImage: "/images/BackgroundTile.png",
-    backgroundRepeat: true,
+    backgroundColor: "white",
     height: Ti.UI.FILL,
     top: "0dp"
 }

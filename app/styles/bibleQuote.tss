@@ -1,0 +1,29 @@
+"#bibleQuote": {
+    height: Ti.UI.FILL,
+    top: "0dp",
+    fullscreen: false,
+    title: "Bible Quote",
+    backButtonTitle: "Back",
+    barColor: "lightgray",
+    backgroundColor: "white"
+},  
+
+"#fill": {
+    height: Ti.UI.FILL,
+    top: "0dp",
+},
+
+"#passage": {
+    left: 5, top: 45, right: 5, bottom: 5,
+    backgroundColor: "#DDDDDD",
+    font: { fontSize: 16 },
+    editable: false,
+    borderRadius: "10dp",
+    borderWidth: "1dp",
+    borderColor: "#888888"
+},
+
+"loading": {
+    center: { x: "50%", y: "50%" }
+}
+

@@ -1,5 +1,6 @@
 <Alloy>
     <Window id="main">
+        <Widget src="com.orthlieb.info" id="info">              
         <View id="fill">
             <Widget src="com.appcelerator.buttongrid" id="buttongrid" />               
         </View>

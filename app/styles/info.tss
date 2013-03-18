@@ -1,0 +1,89 @@
+"#main": {
+    fullscreen: false,
+    title: "Settings",
+    backButtonTitle: "Back",
+    barColor: "#26688b",
+    backgroundColor: "#185674"
+},
+
+"#scrollview": {
+    contentWidth: Ti.UI.FILL,
+    contentHeight:'auto',
+    showVerticalScrollIndicator: true,
+    layout: 'vertical'
+},
+
+"#bible_container": {
+    center: { x: "50%", y: "50%" },
+    width: Ti.UI.SIZE,
+    height: 30,
+    layout: "horizontal",
+    backgroundColor: "green"
+},
+
+"#bibleversion": {
+    left: 5,
+    center: { y: "50%" },
+    width: Ti.UI.SIZE, 
+    height: 30,
+    hintText: 'Select a Bible Version',
+    color: "white",
+    backgroundColor: "red"
+},
+
+"#version": {
+    width: Ti.UI.FILL,
+    height: Ti.UI.SIZE,
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+    color: "white"
+},
+
+"#logo": {
+    width: Ti.UI.FILL,
+    backgroundColor: "#26688b",
+    image: "images/InfoPortrait.png"
+},
+
+"#font_container": {
+    center: { x: "50%", y: "50%" },
+    width: Ti.UI.SIZE,
+    height: Ti.UI.SIZE,
+    layout: "horizontal",
+},
+
+".label": {
+    left: 5,
+    color: "white"
+},
+
+".fontbutton": {
+    left: 5,
+    width: 30,
+    height: 30,
+    style: Ti.UI.iPhone.SystemButtonStyle.PLAIN,
+    borderRadius: 5,
+    borderWidth: 1,
+    selectedColor: "yellow"
+},
+
+"#email": {
+    height: 30,
+    width: "40%",
+    style: Ti.UI.iPhone.SystemButtonStyle.PLAIN,
+    borderColor: "white",
+    borderRadius: "5dp",
+    borderWidth: "1dp",
+    color: "white",
+    selectedColor: "yellow" 
+},
+
+".line1": {
+    height: 50,
+    backgroundColor: "#26688b",
+},
+
+".line2": {
+    height: 50,
+    backgroundColor: "#185674",
+}
+

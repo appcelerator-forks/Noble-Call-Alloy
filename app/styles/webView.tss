@@ -1,12 +1,23 @@
-"#main": {
-    height: Ti.UI.FILL,
-    top: "0dp",
+"#webView": {
+    left: 0, top: 0, right: 0, bottom: 0,
     fullscreen: false,
+    backButtonTitle: "Back"
 },  
 
 "#fill": {
-    backgroundImage: "/images/BackgroundTile.png",
-    backgroundRepeat: true,
-    height: Ti.UI.FILL,
-    top: "0dp"
+    left: 0, top: 0, right: 0, bottom: 0,
+    backgroundColor: "white",
+},
+
+"#scrollableWebView": {
+    top: 0, left: 0, right: 0, bottom: 0,
+    pagingControlStyle: "toolbar",
+    showPagingControl: "auto",
+    webView: {
+        scalesPageToFit: false,
+        enableZoomControls: false
+    },
+    toolbar: {
+        backgroundColor: "#DDDDDD"
+    }
 }

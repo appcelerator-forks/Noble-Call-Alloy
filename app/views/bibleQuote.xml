@@ -1,0 +1,8 @@
+<Alloy>
+	<Window id="bibleQuote">
+        <View id="fill">
+            <TextArea id="passage"/>
+            <Widget src="com.appcelerator.loading" id = "loading"/>
+	    </View>
+	</Window>
+</Alloy>

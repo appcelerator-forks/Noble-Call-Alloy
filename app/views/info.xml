@@ -1,0 +1,28 @@
+<Alloy>
+    <Window id="main">
+        <ScrollView id="scrollview">
+           <View class="line2">
+               <View id="bible_container">
+                   <Label class="label">Version:</Label>
+                   <Widget src="com.orthlieb.combobox" id="bibleversion"/>
+               </View>
+           </View>
+           <View class="line1">
+                <View id="font_container">
+                    <Label class="label">Font Size:</Label>
+                    <Button id="small" class="fontbutton" onClick="SizeClick">S</Button>
+                    <Button id="medium" class="fontbutton" onClick="SizeClick">M</Button>
+                    <Button id="large" class="fontbutton" onClick="SizeClick">L</Button>
+                    <Button id="xlarge" class="fontbutton" onClick="SizeClick">X</Button>
+                </View>
+            </View>
+            <View class="line2">
+                <Button id="email"/>
+            </View>
+            <ImageView id="logo"/>
+            <View class="line2">
+                <Label id="version"/>
+            </View>
+        </ScrollView>
+    </Window>
+</Alloy>

@@ -2,12 +2,13 @@
     height: Ti.UI.FILL,
     top: "0dp",
     fullscreen: false,
-    title: "Courageous Conversation"
+    title: "Courageous Conversation",
+    backButtonTitle: "Back",
+    barColor: "#9e0000"
 },  
 
 "#fill": {
-    backgroundImage: "/images/BackgroundTile.png",
-    backgroundRepeat: true,
+    backgroundColor: "white",
     height: Ti.UI.FILL,
     top: "0dp"
 }

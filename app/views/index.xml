@@ -1,4 +1,5 @@
 <Alloy>
     <Window>
+        <Widget src="com.orthlieb.navigationgroup" id="navgroup"/>
     </Window>
 </Alloy>
