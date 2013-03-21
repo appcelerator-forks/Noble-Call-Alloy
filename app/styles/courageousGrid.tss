@@ -2,7 +2,7 @@
     height: Ti.UI.FILL,
     top: "0dp",
     fullscreen: false,
-    title: "Courageous Conversation",
+    title: "Courageous",
     backButtonTitle: "Back",
     barColor: "#9e0000"
 },  

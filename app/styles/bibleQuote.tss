@@ -1,29 +1,17 @@
 "#bibleQuote": {
-    height: Ti.UI.FILL,
-    top: "0dp",
+    left: 0, top: 0, right: 0, bottom: 0,
     fullscreen: false,
-    title: "Bible Quote",
     backButtonTitle: "Back",
-    barColor: "lightgray",
-    backgroundColor: "white"
-},  
-
-"#fill": {
-    height: Ti.UI.FILL,
-    top: "0dp",
+    backgroundColor: "white",
+    barColor: "#888888"
 },
 
 "#passage": {
-    left: 5, top: 45, right: 5, bottom: 5,
-    backgroundColor: "#DDDDDD",
-    font: { fontSize: 16 },
-    editable: false,
-    borderRadius: "10dp",
-    borderWidth: "1dp",
-    borderColor: "#888888"
+    left: 5, right: 5,
+    height: Ti.UI.FILL,
+    editable: false
 },
 
 "loading": {
     center: { x: "50%", y: "50%" }
 }
-

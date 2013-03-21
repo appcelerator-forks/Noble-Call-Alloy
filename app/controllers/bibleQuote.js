@@ -1,64 +1,27 @@
-$.baseURL = 'http://rebar.orthlieb.com/';
-
-$.version.init({ 
-    parentView: $.bibleQuote
-});
-
 var id = arguments[0].version;
 var verse = arguments[0].verse;
 
-$.bibleQuote.title = verse;
-// Load up the combo box.
-function loadVersions() {
-    var xhr = Ti.Network.createHTTPClient({
-        onload : function (e) {
-            var bibles = JSON.parse(this.responseText);
-            $.version.choices = bibles;   
-            $.version.id = id; 
-            $.info.visible = true;
-        },
-        onerror : function(e) {
-            console.error('Error %d Message: %s', e.error, e.message);
-            alert("Problem encountered while loading bible versions, please check your internet connection. %s", e.message);
-            Alloy.Globals.navGroup.back();
-        },
-        timeout : 10000
-    });
+var bibles = new (require('bibles'))();
+$.bibleQuote.title = verse + " (" + bibles.selectedVersion + ")";
 
-    xhr.open("GET", $.baseURL + "getVersions");
-    xhr.send();
-}
-loadVersions();
+var font = new (require('font'))();
+$.passage.font = {
+    fontFamily: 'Optima-Regular',
+    fontSize: font.size  
+};
 
-// Whenever the user changes the version combobox we relook up the passage.
-$.version.on("change", function (e) {
-    id = e.id;
-    $.passage.value = "";
-    loadPassage();
-    $.trigger("change", { version: e.id });
+// Break out the arguments and lookup the passage.
+var arr = verse.match(/(.+?)\s(\d+?):(.+?$)/);
+$.loading.setOpacity(1);
+bibles.getQuote({
+    version: bibles.selectedVersion,
+    book: arr[1],
+    chapter: arr[2],
+    verse: arr[3]
+}, function (r) {   // Success
+    $.passage.value = r.text; 
+    $.loading.setOpacity(0);  
+}, function (e) {   // Error
+    alert("Problem encountered while loading passage, please check your internet connection.\n\n" + e.error);
+    Alloy.Globals.navGroup.back();        
 });
-
-// Load up the passage
-function loadPassage() {
-    $.loading.setOpacity(1);
-    var xhr = Ti.Network.createHTTPClient({
-        onload : function (e) {
-            var res = JSON.parse(this.responseText);
-            $.passage.value = res.text; 
-            $.loading.setOpacity(0);  
-        },
-        onerror : function(e) {
-            console.error('Error %d Message: %s', e.error, e.message);
-            alert("Problem encountered while loading passage, please check your internet connection. %s", e.message);
-            Alloy.Globals.navGroup.back();        
-        },
-        timeout : 10000
-    });
-
-    var arr = verse.match(/(.+?)\s(\d+?):(.+?$)/);
-
-    console.debug($.baseURL + "getQuote/?version=" + id + "&book=" + arr[1] + "&chapter=" + arr[2] + "&verse=" + arr[3]);
-    xhr.open("GET", $.baseURL + "getQUote/?version=" + id + "&book=" + arr[1] + "&chapter=" + arr[2] + "&verse=" + arr[3]);
-    xhr.send(); 
-}
-loadPassage();

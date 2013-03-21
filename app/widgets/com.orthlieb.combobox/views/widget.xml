@@ -1,0 +1,7 @@
+<Alloy>
+    <View id="container" platform="ios">
+        <TextField platform="ios" id="field" onClick="ComboBoxClick"/>
+        <Button platform="ios" id="dropButton" onClick="ComboBoxClick"/>
+	</View>
+    <View platform="android,mobileweb" id="field"/>
+</Alloy>

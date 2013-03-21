@@ -6,8 +6,8 @@ function http_request(url, success, error, payload)
         onload : function (e) {
             try {
                 Ti.API.info('Success: ' + url + ' response: ' + this.responseText);
-                var bibles = JSON.parse(this.responseText);
-                success && success(bibles);
+                var resp = JSON.parse(this.responseText);
+                success && success(resp);
             } catch (err) {
                Ti.API.error('Error ' + err.error + 'Message ' + err.message);
                error && error(err);
@@ -24,7 +24,8 @@ function http_request(url, success, error, payload)
     if (payload) {
         var values = [];        
         for (var key in payload) {
-            values.push(key + '=' + payload[key]); 
+            if (payload[key])
+                values.push(key + '=' + payload[key]); 
         }            
         url = url + '?' + values.join('&');
     }
@@ -38,10 +39,19 @@ function getVersions(success, error) {
 }
 
 function getQuote(payload, success, error) {
-    http_request(BASE_URL + 'quote.json', success, error);
+    http_request(BASE_URL + 'quote.json', success, error, payload);
 }
 
 function BibleModel() {
+    // Property: selectedVersion Gets/sets the bible version selected by the user.   
+    Object.defineProperty(this, "selectedVersion", {
+        get: function() { 
+            return Ti.App.Properties.getString('BibleVersion', "kjv"); 
+        },
+        set: function(version) {
+            Ti.App.Properties.setString('BibleVersion', version);
+        }
+    });
 }
 
 BibleModel.prototype.getVersions = getVersions;

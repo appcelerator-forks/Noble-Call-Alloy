@@ -96,6 +96,11 @@ $.buttongrid.on('click', function (e) {
     }
 });
 
+// Ensure that the button grid gets relayed out when the device is rotated.
+function relayout() { $.buttongrid.relayout(); }
+Ti.Gesture.addEventListener("orientationchange", relayout);
+$.main.addEventListener('close', function (e) { Ti.Gesture.removeEventListener('orientationchange', relayout); });
+
 // Set up the info button.
 $.info.systemButton = Ti.UI.iPhone.SystemButton.INFO_DARK,
 $.info.icon = "images/info.png"; 

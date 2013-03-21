@@ -1,11 +1,9 @@
 <Alloy>
     <Window id="main">
         <ScrollView id="scrollview">
-           <View class="line2">
-               <View id="bible_container">
-                   <Label class="label">Version:</Label>
-                   <Widget src="com.orthlieb.combobox" id="bibleversion"/>
-               </View>
+           <View id="bible_container" class="line2">
+                <Widget src="com.orthlieb.combobox" id="bibleversion"/>
+                <TextArea id="description"/>
            </View>
            <View class="line1">
                 <View id="font_container">

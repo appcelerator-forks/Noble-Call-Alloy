@@ -1,37 +1,36 @@
 $.version.text = L('version_group') + ' ' + L('version_number') + ' ';
 
 // Set up the combobox.
-var Bibles = require('bibles');
-var bibles = new Bibles();
+var bibles = new (require('bibles'))();
 bibles.getVersions(
     function (versions) {
         $.bibleversion.choices = versions;
-        $.bibleversion.id = Ti.App.Properties.getString('BibleVersion', "kjv");        
+        $.bibleversion.id = bibles.selectedVersion;  
+        $.description.value = versions[$.bibleversion.id].description + '\n\n' + versions[$.bibleversion.id].copyright;      
     },
     function (e) {
         alert(L("no_versions"));
         $.bible_container.visible = false;
     }
 );
-$.bibleversion.init({ 
-    parentView: $.main
-});
+$.bibleversion.init($.main);
 $.bibleversion.on("change", function (e) {
-   Ti.App.Properties.setString("BibleVersion", e.id); // Store for future use 
+    $.description.value = $.bibleversion.choices[e.id].description + '\n\n' + $.bibleversion.choices[e.id].copyright;      
+    bibles.selectedVersion = e.id; 
 });
 
 // Set up the logo.
-function SetLogo(o) {
+function SetLogo(e) {
+    var o = e.orientation;
+    Ti.API.info("Rotating Logo");
     var isLandscape = o ==  Ti.UI.LANDSCAPE_LEFT || o == Ti.UI.LANDSCAPE_RIGHT;
     var isPortrait = o == Ti.UI.PORTRAIT || o == Ti.UI.UPSIDE_PORTRAIT;
     if (isLandscape || isPortrait)
         $.logo.image = 'images/Info' + (isLandscape ? "Landscape" : "Portrait") + ".png";    
 }
-SetLogo(Ti.Gesture.orientation);
-
-Ti.Gesture.addEventListener('orientationchange', function (e) {
-    SetLogo(e.orientation);
-});
+SetLogo({ o: Ti.Gesture.orientation });
+Ti.Gesture.addEventListener('orientationchange', SetLogo);
+$.main.addEventListener('close', SetLogo);  // Remember to clean up.
 
 // Set up the email button.
 $.email.title = L('button_bug') ;      
@@ -54,22 +53,10 @@ function SelectRadioButton(buttons, selected) {
 } 
 
 var buttons = [ "small", "medium", "large", "xlarge" ];
-var fontSizeName = Ti.App.Properties.getString('FontSizeName', 'medium');
-SelectRadioButton(buttons, fontSizeName);
+var font = new (require('font'))();
+SelectRadioButton(buttons, font.sizeName);
 
 function SizeClick(e) {
     SelectRadioButton(buttons, e.source.id);
-    Ti.App.Properties.setString('FontSizeName', e.source.id);
+    font.sizeName = e.source.id;
 }
-
-// // Set up the info button.
-// $.info.systemButton = Ti.UI.iPhone.SystemButton.INFO_DARK,
-// $.info.icon = "images/info.png"; 
-// $.info.text = L("about");
-// $.info.init($.bibleQuote);
-// $.info.on("click", function (e) {    
-    // var info = Alloy.createController('bibleInfo', { description: $.version.choices[$.version.id].description + "\n\n" + $.version.choices[$.version.id].copyright });
-    // Alloy.Globals.navGroup.open(info.getView());
-// });
-// $.info.visible = false;     // Until the versions are loaded.
-// 

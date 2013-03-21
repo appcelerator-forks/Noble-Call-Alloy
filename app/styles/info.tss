@@ -14,22 +14,36 @@
 },
 
 "#bible_container": {
-    center: { x: "50%", y: "50%" },
-    width: Ti.UI.SIZE,
-    height: 30,
-    layout: "horizontal",
-    backgroundColor: "green"
+    width: Ti.UI.FILL,
+    height: 120,
+    layout: "vertical"
 },
 
 "#bibleversion": {
-    left: 5,
-    center: { y: "50%" },
-    width: Ti.UI.SIZE, 
-    height: 30,
+    left: 5, top: 10, right: 5, height: 35,
     hintText: 'Select a Bible Version',
     color: "white",
-    backgroundColor: "red"
+    textAlign: Ti.UI.TEXT_ALIGNMENT_CENTER,
+    dropButton: {
+        right: 5,
+        color: "white",
+        selectedColor: "yellow",
+        title: "\u25BE",
+        style: Ti.UI.iPhone.SystemButtonStyle.PLAIN
+    }
 },
+
+"#description": {
+    width: Ti.UI.FILL,
+    height: 60,
+    color: "white",
+    editable: false,
+    backgroundColor: "transparent"
+},
+
+".label": {
+    color: "white"
+}
 
 "#version": {
     width: Ti.UI.FILL,
@@ -49,11 +63,6 @@
     width: Ti.UI.SIZE,
     height: Ti.UI.SIZE,
     layout: "horizontal",
-},
-
-".label": {
-    left: 5,
-    color: "white"
 },
 
 ".fontbutton": {
